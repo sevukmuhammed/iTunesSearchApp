@@ -16,9 +16,15 @@ target 'SearchApp' do
   pod 'Reusable'
   pod 'Kingfisher'
   pod 'Cosmos', '~> 23.0'
+  
+  # Pods for SearchApp
+
+end
+
+target 'SearchAppTests' do
   pod 'RxBlocking'
   pod 'RxTest'
-
-  # Pods for SearchApp
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
 end

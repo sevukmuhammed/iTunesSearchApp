@@ -23,7 +23,6 @@ final class SearchPageViewController: BaseViewController, SearchPageStoryboardLo
     var totalCount : NSInteger?
     var isGetResponse : Bool = true
     var activityIndiator : UIActivityIndicatorView?
-    var limit = 20
     
     override func viewDidLoad() {
         

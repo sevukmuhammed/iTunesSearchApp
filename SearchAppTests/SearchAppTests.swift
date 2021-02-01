@@ -61,10 +61,6 @@ class SearchAppTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testdeneme() throws {
-        let vc: SearchPageViewController! = SearchPageViewController()
-        let result = vc.subscribeAll()
-    }
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {

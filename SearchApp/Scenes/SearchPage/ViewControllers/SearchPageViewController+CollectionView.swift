@@ -54,15 +54,6 @@ extension SearchPageViewController : UICollectionViewDataSource {
         }).disposed(by: disposeBag)
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.behaviorRelay.value.results?.count ?? 0 - 1 {
-            if viewModel.behaviorRelay.value.results?.count ?? 0 < 200 {
-                var index = viewModel.behaviorRelay.value.results?.count ?? 0
-                limit = index + 20
-                
-            }
-        }
-    }
     
 }
 
