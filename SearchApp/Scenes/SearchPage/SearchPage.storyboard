@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Page View Controller-->
+        <scene sceneID="1ln-IS-zNh">
+            <objects>
+                <viewController storyboardIdentifier="SearchPage" id="mff-5x-HZF" customClass="SearchPageViewController" customModule="SearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vX9-uX-s0m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-3y-IB6">
+                                <rect key="frame" x="5" y="49" width="404" height="32"/>
+                                <segments>
+                                    <segment title="Movie"/>
+                                    <segment title="Song"/>
+                                    <segment title="Software"/>
+                                    <segment title="Book"/>
+                                </segments>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XBh-xR-Q2H">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KUf-IF-ORu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sqx-gn-3CN">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bKK-ov-ba7">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a9X-VO-rQW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ToO-3y-IB6" firstAttribute="top" secondItem="a9X-VO-rQW" secondAttribute="top" constant="5" id="5HS-El-NND"/>
+                            <constraint firstItem="XBh-xR-Q2H" firstAttribute="leading" secondItem="a9X-VO-rQW" secondAttribute="leading" id="9hm-KM-Vfc"/>
+                            <constraint firstItem="ToO-3y-IB6" firstAttribute="leading" secondItem="a9X-VO-rQW" secondAttribute="leading" constant="5" id="HHC-br-3yY"/>
+                            <constraint firstItem="XBh-xR-Q2H" firstAttribute="top" secondItem="ToO-3y-IB6" secondAttribute="bottom" constant="8" id="IzO-vz-muY"/>
+                            <constraint firstItem="XBh-xR-Q2H" firstAttribute="trailing" secondItem="a9X-VO-rQW" secondAttribute="trailing" id="RJm-Uv-cO0"/>
+                            <constraint firstItem="ToO-3y-IB6" firstAttribute="centerX" secondItem="a9X-VO-rQW" secondAttribute="centerX" id="WcC-kI-jt8"/>
+                            <constraint firstItem="ToO-3y-IB6" firstAttribute="trailing" secondItem="a9X-VO-rQW" secondAttribute="trailing" constant="-5" id="iEp-pX-ay5"/>
+                            <constraint firstAttribute="bottom" secondItem="XBh-xR-Q2H" secondAttribute="bottom" id="t6T-Lf-Av3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="XBh-xR-Q2H" id="2q3-jI-xyS"/>
+                        <outlet property="segmentedControl" destination="ToO-3y-IB6" id="i7b-Dk-pCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvL-lT-agi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282.60869565217394" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
